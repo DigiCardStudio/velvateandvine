@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#21151f">
+<title>Velvet & Vine | Salon Digital Card</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#21151f;--panel:#30202e;--panel2:#392738;--rose:#bd8292;--gold:#c8a36a;--cream:#f8f2ed;--muted:#c3b1bc;--line:#ffffff20}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}body{margin:0;background:radial-gradient(ellipse at 50% 0%,#493047 0,#21151f 45%,#160f16 100%);color:var(--cream);font-family:'DM Sans',sans-serif;min-height:100vh}
+.page{width:min(100% - 24px,520px);margin:24px auto 100px}.portal{background:linear-gradient(160deg,#2d1e2b,#21151f 45%,#261923);border:1px solid #c8a36a55;border-radius:24px;overflow:hidden;box-shadow:0 25px 90px #0008}
+.cover{height:170px;background:linear-gradient(0deg,#21151f 0%,#21151f00 70%),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85') center 45%/cover;position:relative}
+.logo{position:absolute;left:50%;bottom:-37px;transform:translateX(-50%);height:76px;width:76px;border-radius:50%;background:#21151f;border:2px solid var(--gold);display:grid;place-items:center;color:var(--gold);font:24px 'Playfair Display';box-shadow:0 5px 22px #0008}
+.intro{text-align:center;padding:48px 25px 22px}.eyebrow{font-size:9px;letter-spacing:2.6px;text-transform:uppercase;color:var(--gold);font-weight:700}.intro h1{font:600 34px 'Playfair Display';margin:8px 0 5px}.tagline{color:#d5b5c0;font:italic 14px 'Playfair Display';margin:0}.intro .desc{font-size:11px;line-height:1.7;color:var(--muted);max-width:360px;margin:13px auto 0}
+.actions{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;padding:0 20px 19px}.btn{display:flex;align-items:center;justify-content:center;gap:7px;padding:12px 8px;border-radius:9px;border:1px solid var(--gold);font-size:10px;font-weight:700;text-decoration:none;color:var(--cream);letter-spacing:.4px}.btn.main{background:var(--gold);color:#21151f}.btn.soft{background:#ffffff08}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);margin:0 20px 20px;background:#ffffff08;border:1px solid var(--line);border-radius:12px}.quick div{text-align:center;padding:12px 3px;border-right:1px solid var(--line)}.quick div:last-child{border:0}.quick b{display:block;color:var(--gold);font:15px 'Playfair Display'}.quick span{display:block;color:var(--muted);font-size:8px;letter-spacing:1px;text-transform:uppercase;margin-top:3px}
+.content{padding:0 18px 20px}.section{padding:18px 0;border-top:1px solid var(--line);scroll-margin-top:12px}.section-title{text-align:center;margin:0 0 14px}.section-title span{color:var(--gold);font-size:8px;letter-spacing:2px;text-transform:uppercase}.section-title h2{font:25px 'Playfair Display';margin:5px 0 0}.about{text-align:center;color:var(--muted);font-size:11px;line-height:1.8;margin:0 auto;max-width:400px}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.service{background:linear-gradient(145deg,#3a2938,#281c28);border:1px solid var(--line);border-radius:11px;padding:13px 12px;min-height:94px}.service .icon{color:var(--gold);font-size:17px}.service h3{font:16px 'Playfair Display';margin:6px 0 4px}.service p{color:var(--muted);font-size:9px;line-height:1.5;margin:0}
+.gallery{display:grid;grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:105px 105px;gap:7px}.gallery button{border:0;padding:0;border-radius:8px;overflow:hidden;background:#392738;cursor:pointer}.gallery button:first-child{grid-row:span 2}.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}.gallery button:hover img{transform:scale(1.06)}
+.info{background:#ffffff08;border:1px solid var(--line);border-radius:11px;padding:13px;margin-bottom:8px}.info small{display:block;color:var(--gold);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px}.info p{margin:0;color:#eadfe5;font-size:11px;line-height:1.6}.book{text-align:center;background:linear-gradient(120deg,#493047,#2d1d2c);border:1px solid #c8a36a66;border-radius:13px;padding:18px}.book h3{font:22px 'Playfair Display';margin:7px 0}.book p{font-size:10px;line-height:1.6;color:var(--muted);margin:0 0 12px}
+.footer{text-align:center;padding:18px 10px 22px;color:#9f8d99;font-size:8px;letter-spacing:1.3px}.footer strong{display:block;font:20px 'Playfair Display';color:var(--gold);letter-spacing:1px;margin-bottom:5px}
+.bottom{position:fixed;z-index:4;left:50%;transform:translateX(-50%);bottom:12px;width:min(calc(100% - 24px),500px);display:grid;grid-template-columns:repeat(5,1fr);background:#30202ef2;backdrop-filter:blur(14px);border:1px solid #c8a36a66;border-radius:14px;padding:8px 4px;box-shadow:0 8px 30px #0008}.bottom a{color:#e9dce3;text-decoration:none;text-align:center;font-size:8px}.bottom span{display:block;font-size:16px;margin-bottom:3px;color:var(--gold)}
+.lightbox{display:none;position:fixed;inset:0;background:#090609f2;z-index:10;align-items:center;justify-content:center;padding:20px}.lightbox.open{display:flex}.lightbox img{max-width:94vw;max-height:86vh;object-fit:contain;border-radius:8px}.close{position:absolute;top:15px;right:18px;border:1px solid white;border-radius:50%;background:transparent;color:white;font-size:22px;width:40px;height:40px}
+@media(max-width:380px){.intro h1{font-size:29px}.page{width:calc(100% - 16px);margin-top:8px}.content{padding:0 13px 16px}.gallery{grid-template-rows:90px 90px}}
+</style></head>
+<body>
+<div class="page"><main class="portal" id="home">
+<div class="cover"><div class="logo">V&V</div></div>
+<header class="intro"><div class="eyebrow">Salon · Beauty · Style</div><h1>VELVET & VINE</h1><p class="tagline">A little luxury, every day.</p><p class="desc">Your neighbourhood beauty destination for expert styling, thoughtful care and a little time just for you.</p></header>
+<div class="actions">
+<a class="btn main" href="https://wa.me/910000000000">☏ WHATSAPP</a><a class="btn soft" href="tel:+910000000000">✆ CALL NOW</a>
+<a class="btn soft" href="#services">✧ OUR SERVICES</a><a class="btn soft" href="#gallery">▧ VIEW GALLERY</a>
+</div>
+<div class="quick"><div><b>01</b><span>Personal care</span></div><div><b>02</b><span>Expert styling</span></div><div><b>03</b><span>Feel confident</span></div></div>
+<div class="content">
+<section class="section" id="about"><div class="section-title"><span>Get to know us</span><h2>About Our Salon</h2></div><p class="about">At Velvet & Vine, beauty is personal. We bring together a welcoming atmosphere, attentive service and style-led treatments to help you look and feel your best. Every visit begins with understanding your preferences and ends with a little extra confidence.</p></section>
+<section class="section" id="services"><div class="section-title"><span>Beauty menu</span><h2>Our Services</h2></div><div class="services">
+<article class="service"><div class="icon">✂</div><h3>Hair Studio</h3><p>Haircut · Styling · Hair Spa · Colour</p></article>
+<article class="service"><div class="icon">✧</div><h3>Skin & Facial</h3><p>Facials · Clean-up · Skin Care</p></article>
+<article class="service"><div class="icon">❀</div><h3>Makeup</h3><p>Party · Occasion · Bridal Makeup</p></article>
+<article class="service"><div class="icon">◇</div><h3>Nail Care</h3><p>Manicure · Pedicure · Nail Care</p></article>
+<article class="service"><div class="icon">♡</div><h3>Beauty Care</h3><p>Waxing · Threading · Grooming</p></article>
+<article class="service"><div class="icon">♕</div><h3>Bridal Packages</h3><p>Personalised bridal beauty plans</p></article>
+</div></section>
+<section class="section" id="gallery"><div class="section-title"><span>Our work & space</span><h2>Photo Gallery</h2></div><div class="gallery">
+<button onclick="showPhoto(0)"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85" alt="Salon interior"></button>
+<button onclick="showPhoto(1)"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=650&q=85" alt="Hair styling"></button>
+<button onclick="showPhoto(2)"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=650&q=85" alt="Beauty portrait"></button>
+<button onclick="showPhoto(3)"><img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=650&q=85" alt="Salon station"></button>
+<button onclick="showPhoto(4)"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=650&q=85" alt="Salon interior detail"></button>
+</div></section>
+<section class="section" id="packages"><div class="section-title"><span>Make it your moment</span><h2>Special Packages</h2></div><div class="info"><small>Signature salon package</small><p>Combine your favourite hair, skin and beauty services. Contact us for package details and current pricing.</p></div><div class="info"><small>Bridal & occasion</small><p>Personalised beauty plans for your special day. Advance appointment recommended.</p></div></section>
+<section class="section" id="contact"><div class="section-title"><span>We'd love to see you</span><h2>Contact & Visit</h2></div><div class="info"><small>Phone / WhatsApp</small><p>+91 00000 00000</p></div><div class="info"><small>Salon Address</small><p>Your salon address, Area, City</p></div><div class="info"><small>Opening Hours</small><p>Monday – Sunday · Add your timings</p></div><div class="book"><div class="eyebrow">Ready for a refresh?</div><h3>Book Your Appointment</h3><p>Message us to check availability, ask about services or plan your next salon visit.</p><a class="btn main" href="https://wa.me/910000000000">BOOK ON WHATSAPP ↗</a><a class="btn soft" href="https://maps.google.com" target="_blank">GET DIRECTIONS ↗</a></div></section>
+</div><footer class="footer"><strong>VELVET & VINE</strong>BEAUTY · STYLE · SELF-CARE<br><br>© <span id="year"></span> All rights reserved</footer>
+</main></div>
+<nav class="bottom"><a href="#home"><span>⌂</span>Home</a><a href="#about"><span>♡</span>About</a><a href="#services"><span>✧</span>Services</a><a href="#gallery"><span>▧</span>Gallery</a><a href="#contact"><span>☎</span>Contact</a></nav>
+<div class="lightbox" id="lightbox" onclick="if(event.target===this)hidePhoto()"><button class="close" onclick="hidePhoto()">×</button><button class="close" style="left:18px;right:auto" onclick="movePhoto(-1)">‹</button><img id="large" alt="Gallery photo enlarged"><button class="close" style="right:68px" onclick="movePhoto(1)">›</button></div>
+<script>
+const photos=[...document.querySelectorAll('.gallery img')].map(i=>i.src);let current=0;
+function showPhoto(i){current=i;document.getElementById('large').src=photos[i];document.getElementById('lightbox').classList.add('open')}
+function hidePhoto(){document.getElementById('lightbox').classList.remove('open')}
+function movePhoto(n){current=(current+n+photos.length)%photos.length;document.getElementById('large').src=photos[current]}
+document.getElementById('year').textContent=new Date().getFullYear();
+document.addEventListener('keydown',e=>{if(e.key==='Escape')hidePhoto();if(e.key==='ArrowRight')movePhoto(1);if(e.key==='ArrowLeft')movePhoto(-1)});
+</script></body></html>
